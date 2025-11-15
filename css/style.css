@@ -1,0 +1,401 @@
+
+:root {
+    --warna-cream: #FAF8F1;         
+    --warna-putih: #FFFFFF;          
+    --warna-coklat-gelap: #4E4039;   
+    --warna-coklat-sedang: #8D6E63;  
+    --warna-krem-terang: #EFEBE5;    
+    --font-utama: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-utama);
+    background-color: var(--warna-cream); 
+    color: var(--warna-coklat-gelap);     
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+
+.main-header { 
+    background-color: var(--warna-putih); 
+    padding: 10px 0; 
+    border-bottom: 2px solid var(--warna-coklat-sedang); 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.main-header .container { 
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+}
+
+.logo-container { 
+    display: flex;
+    align-items: center;
+}
+
+.header-logo {
+    height: 40px;
+    margin-right: 15px;
+}
+
+.site-title { 
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--warna-coklat-gelap);
+}
+
+.main-nav ul { 
+    list-style: none; 
+    display: flex;
+    margin: 0; 
+    padding: 0;
+}
+
+.main-nav ul li {
+    margin-left: 25px; 
+}
+
+.main-nav ul li a {
+    text-decoration: none;
+    color: var(--warna-coklat-sedang);
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.main-nav ul li a:hover {
+    background-color: var(--warna-cream);
+    color: var(--warna-coklat-gelap);
+}
+
+.main-nav ul li a.active { 
+    background-color: var(--warna-coklat-gelap);
+    color: var(--warna-putih);
+}
+
+
+
+.hero-section { 
+  
+    background-image: url(/image/kelas.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 700px; 
+    display: flex;
+    justify-content:center;
+    align-items:center ;
+    text-align: center ;
+    position: relative;
+    color: var(--warna-putih); 
+    padding: 30px;
+}
+
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2; 
+    max-width: 800px;
+    padding: 20px;
+}
+
+.hero-content h1 {
+    font-size: 42px;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.7); 
+}
+
+.hero-content p {
+    font-size: 18px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+}
+
+
+#spotlight-prestasi {
+    padding: 60px 0;
+    text-align: center;
+    background-color: var(--warna-krem-terang); 
+    margin-top: 0; 
+}
+
+#spotlight-prestasi h2 {
+    font-size: 32px;
+    margin-bottom: 40px;
+    color: var(--warna-coklat-gelap);
+}
+
+.spotligth-container { 
+    display: flex;
+    justify-content: space-around; 
+    flex-wrap: wrap; 
+    gap: 20px; 
+}
+
+.student-card {
+    background-color: var(--warna-putih); 
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    width: 300px; 
+    padding: 25px;
+    transition: transform 0.3s ease;
+}
+
+.student-card:hover {
+    transform: translateY(-5px); 
+}
+
+.student-card img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover; 
+    border-radius: 50%; 
+    border: 3px solid var(--warna-coklat-sedang);
+    margin-bottom: 15px;
+}
+
+.student-card h3 {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.student-card .prestasi {
+    font-size: 14px;
+    color: var(--warna-coklat-sedang);
+    font-style: italic;
+    margin-bottom: 15px;
+}
+
+.student-card blockquote {
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--warna-coklat-gelap);
+}
+
+footer {
+    background-color: var(--warna-coklat-gelap);
+    color: var(--warna-cream);
+    text-align: center;
+    padding: 30px 0;
+    margin-top: 40px;
+}
+
+#profil-kelas {
+    padding: 60px 0;
+    background-color: var(--warna-putih); 
+    border-bottom: 1px solid var(--warna-krem-terang);
+}
+
+#profil-kelas h2 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 40px;
+    color: var(--warna-coklat-gelap);
+}
+
+.profil-content {
+    background-color: var(--warna-krem-terang); 
+    border: 2px solid var(--warna-coklat-gelap); 
+    padding: 40px; 
+    border-radius: 8px; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+    line-height: 1.8;
+    color: var(--warna-coklat-gelap); 
+    margin-top: 20px; 
+}
+
+.profil-content h3 {
+    color: var(--warna-coklat-gelap); 
+    margin-top: 30px;
+    margin-bottom: 15px;
+    border-bottom: 2px solid var(--warna-coklat-sedang); 
+    padding-bottom: 5px;
+    font-size: 24px; 
+}
+
+.profil-content p {
+    margin-bottom: 15px;
+}
+
+.profil-content ul {
+    list-style: disc;
+    margin-left: 30px;
+    margin-bottom: 20px;
+}
+
+.profil-content ul li {
+    margin-bottom: 5px;
+}
+
+.profil-image {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    display: block;
+    margin: 30px auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#sejarah-kelas {
+    padding: 40px 0;
+    background-color: var(--warna-cream);
+    text-align: center;
+}
+
+#struktur-organisasi {
+    padding: 100px 0;
+    text-align: center;
+    background-color: var(--warna-cream);
+}
+
+#struktur-organisasi h2 {
+    font-size: 36px;
+    margin-bottom: 50px;
+    color: var(--warna-coklat-gelap);
+}
+
+.struktur-bagan {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+}
+
+.level-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    position: relative;
+    margin-bottom: 50px; 
+}
+
+.card-item {
+    padding: 0 30px;
+    position: relative;
+    text-align: center;
+}
+
+.nama-card {
+    background-color: var(--warna-putih);
+    color: var(--warna-coklat-gelap);
+    padding: 10px 15px;
+    border: 1px solid var(--warna-coklat-sedang);
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    font-weight: bold;
+    
+    display: flex;
+    flex-direction: row; 
+    align-items: center;
+    text-align: left; 
+    width: fit-content;
+    margin: 0 auto; 
+}
+
+
+.pengurus-foto {
+    width: 100px; 
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid var(--warna-coklat-sedang);
+    margin-right: 8px; 
+}
+
+.level-1 .card-item::after {
+    content: '';
+    position: absolute;
+    bottom: -40px; 
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 40px;
+    background-color: var(--warna-coklat-sedang);
+}
+
+
+.level-2::before {
+    content: '';
+    position: absolute;
+    top: -40px;
+    left: 0;
+    right: 0;
+    height: 8px;
+    background-color: var(--warna-coklat-sedang);
+    width: calc(100% - 20px); 
+    margin: 0 10px;
+}
+
+
+.level-2 .card-item::before {
+    content: '';
+    position: absolute;
+    top: -40px; 
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 50px;
+    background-color: var(--warna-coklat-sedang);
+}
+
+
+.level-2::before {
+    z-index: -1; 
+}
+
+
+.level-1 .card-item::after {
+    height: 20px;
+    bottom: -20px;
+    z-index: 10;
+}
+
+
+
+#deskripsi-tugas {
+    padding: 50px 0;
+    background-color: var(--warna-krem-terang);
+}
+
+#deskripsi-tugas h3 {
+    text-align: left;
+    margin-bottom: 30px;
+    color: var(--warna-coklat-gelap);
+}
+
+#deskripsi-tugas ul {
+    list-style: disc;
+    margin-left: 50px;
+    text-align: left;
+    max-width: 800px;
+    margin: 0 auto;
+    padding-left: 20px;
+}
+
+#deskripsi-tugas ul li {
+    margin-bottom: 10px;
+}
