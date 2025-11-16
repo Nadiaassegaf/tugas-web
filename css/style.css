@@ -432,3 +432,85 @@ footer {
 #deskripsi-tugas ul li {
     margin-bottom: 10px;
 }
+
+
+#daftar-anggota {
+    padding: 60px 0;
+    background-color: var(--warna-cream);
+    text-align: center;
+}
+
+#daftar-anggota h2 {
+    font-size: 32px;
+    margin-bottom: 40px;
+    color: var(--warna-coklat-gelap);
+}
+
+.anggota-grid { 
+    display: grid;
+   
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 30px;
+    justify-items: center; 
+}
+
+.anggota-card {
+    background-color: var(--warna-putih);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease;
+    width: 100%;
+}
+
+.anggota-card:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.anggota-foto {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid var(--warna-coklat-sedang);
+    margin-bottom: 15px;
+}
+
+.anggota-card h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+    color: var(--warna-coklat-gelap);
+}
+
+.anggota-card .role {
+    font-size: 13px;
+    color: var(--warna-coklat-sedang);
+    margin-bottom: 10px;
+}
+
+.anggota-card blockquote {
+    font-size: 14px;
+    font-style: italic;
+    margin-top: 10px;
+    color: var(--warna-coklat-gelap);
+}
+
+@media (max-width: 1024px) {
+    .anggota-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) { 
+    .anggota-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .anggota-grid {
+        grid-template-columns: 1fr;
+    }
+}
