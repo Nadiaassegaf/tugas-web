@@ -156,16 +156,8 @@ body {
     text-align: center;
 }
 
-.social-icon.instagram {
-    background-color: #E1306C; 
-}
-
-.social-icon.tiktok {
-    background-color: #000000;
-}
-
-.social-icon:hover {
-    opacity: 0.8;
+.social-icons img {
+    width: 50px;
 }
 
 
