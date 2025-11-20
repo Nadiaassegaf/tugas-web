@@ -1,10 +1,10 @@
 
 :root {
-    --warna-cream: #FAF8F1;         
-    --warna-putih: #FFFFFF;          
-    --warna-coklat-gelap: #4E4039;   
-    --warna-coklat-sedang: #8D6E63;  
-    --warna-krem-terang: #EFEBE5;    
+    --warna-cream: #FAF8F1;
+    --warna-putih: #FFFFFF;
+    --warna-coklat-gelap: #4E4039;
+    --warna-coklat-sedang: #8D6E63;
+    --warna-krem-terang: #EFEBE5;
     --font-utama: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
@@ -16,8 +16,8 @@
 
 body {
     font-family: var(--font-utama);
-    background-color: var(--warna-cream); 
-    color: var(--warna-coklat-gelap);     
+    background-color: var(--warna-cream);
+    color: var(--warna-coklat-gelap);
     line-height: 1.6;
 }
 
@@ -27,21 +27,23 @@ body {
     margin: 0 auto;
 }
 
-
-.main-header { 
-    background-color: var(--warna-putih); 
-    padding: 10px 0; 
-    border-bottom: 2px solid var(--warna-coklat-sedang); 
+/* =========================================
+   2. HEADER & NAVIGASI
+   ========================================= */
+.main-header {
+    background-color: var(--warna-putih);
+    padding: 10px 0;
+    border-bottom: 2px solid var(--warna-coklat-sedang);
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
 }
 
-.main-header .container { 
+.main-header .container {
     display: flex;
-    justify-content: space-between; 
+    justify-content: space-between;
     align-items: center;
 }
 
-.logo-container { 
+.logo-container {
     display: flex;
     align-items: center;
 }
@@ -51,21 +53,21 @@ body {
     margin-right: 15px;
 }
 
-.site-title { 
+.site-title {
     font-size: 24px;
     font-weight: bold;
     color: var(--warna-coklat-gelap);
 }
 
-.main-nav ul { 
-    list-style: none; 
+.main-nav ul {
+    list-style: none;
     display: flex;
-    margin: 0; 
+    margin: 0;
     padding: 0;
 }
 
 .main-nav ul li {
-    margin-left: 25px; 
+    margin-left: 25px;
 }
 
 .main-nav ul li a {
@@ -82,29 +84,28 @@ body {
     color: var(--warna-coklat-gelap);
 }
 
-.main-nav ul li a.active { 
+.main-nav ul li a.active {
     background-color: var(--warna-coklat-gelap);
     color: var(--warna-putih);
 }
 
-
-
-.hero-section { 
-  
-    background-image: url(../image/kelas.jpg);
+/* =========================================
+   3. HERO SECTION (HOME - INDEX.HTML)
+   ========================================= */
+.hero-section {
+    background-image: url(../image/kelas.jpg); 
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     height: 700px; 
     display: flex;
-    justify-content:center;
-    align-items:center ;
-    text-align: center ;
-    position: relative;
-    color: var(--warna-putih); 
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative; 
+    color: var(--warna-putih);
     padding: 30px;
 }
-
 
 .hero-section::before {
     content: '';
@@ -119,7 +120,7 @@ body {
 
 .hero-content {
     position: relative;
-    z-index: 2; 
+    z-index: 2;
     max-width: 800px;
     padding: 20px;
 }
@@ -127,7 +128,7 @@ body {
 .hero-content h1 {
     font-size: 42px;
     margin-bottom: 10px;
-    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.7); 
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.7);
 }
 
 .hero-content p {
@@ -135,37 +136,48 @@ body {
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
 }
 
-.social-icons {
-    margin-top: 20px;
+
+.social-icons-bottom {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
     display: flex;
-    flex-direction: column; 
-    align-items: center;    
-    gap: 15px; 
-    z-index: 3; 
+    gap: 15px;
+    z-index: 10;
 }
 
-.social-icon {
-    display: inline-block;
-    padding: 10px 15px;
-    border-radius: 5px;
+.social-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
     text-decoration: none;
+    color: white;
     font-weight: bold;
-    color: var(--warna-putih);
-    transition: opacity 0.3s ease;
-    width: 200px; 
-    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5); 
+    padding: 8px 12px;
+    border-radius: 30px;
+    transition: transform 0.3s ease, background-color 0.3s;
 }
 
-.social-icons img {
-    width: 50px;
+.social-item img {
+    width: 24px;
+    height: 24px;
+    display: block;
 }
 
+.social-item:hover {
+    transform: translateY(-3px);
+    background-color: rgba(0, 0, 0, 0.8); 
+}
 
+/* =========================================
+   4. SPOTLIGHT / PRESTASI (HOME)
+   ========================================= */
 #spotlight-prestasi {
     padding: 60px 0;
     text-align: center;
-    background-color: var(--warna-krem-terang); 
-    margin-top: 0; 
+    background-color: var(--warna-krem-terang);
+    margin-top: 0;
 }
 
 #spotlight-prestasi h2 {
@@ -174,31 +186,31 @@ body {
     color: var(--warna-coklat-gelap);
 }
 
-.spotligth-container { 
+.spotligth-container {
     display: flex;
-    justify-content: space-around; 
-    flex-wrap: wrap; 
-    gap: 20px; 
+    justify-content: center; 
+    flex-wrap: wrap;
+    gap: 30px;
 }
 
 .student-card {
-    background-color: var(--warna-putih); 
+    background-color: var(--warna-putih);
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
-    width: 300px; 
+    width: 300px;
     padding: 25px;
     transition: transform 0.3s ease;
 }
 
 .student-card:hover {
-    transform: translateY(-5px); 
+    transform: translateY(-5px);
 }
 
 .student-card img {
     width: 120px;
     height: 120px;
-    object-fit: cover; 
-    border-radius: 50%; 
+    object-fit: cover;
+    border-radius: 50%;
     border: 3px solid var(--warna-coklat-sedang);
     margin-bottom: 15px;
 }
@@ -221,45 +233,40 @@ body {
     color: var(--warna-coklat-gelap);
 }
 
-footer {
-    background-color: var(--warna-coklat-gelap);
-    color: var(--warna-cream);
-    text-align: center;
-    padding: 30px 0;
-    margin-top: 40px;
-}
-
+/* =========================================
+   5. HALAMAN PROFIL
+   ========================================= */
 #profil-kelas {
     padding: 60px 0;
-    background-color: var(--warna-putih); 
-    border-bottom: 1px solid var(--warna-krem-terang);
+    background-color: var(--warna-coklat-sedang);
+    border-bottom: 1px solid var(--warna-coklat-gelap);
 }
 
 #profil-kelas h2 {
     text-align: center;
     font-size: 36px;
     margin-bottom: 40px;
-    color: var(--warna-coklat-gelap);
+    color: var(--warna-cream);
 }
 
 .profil-content {
-    background-color: var(--warna-krem-terang); 
-    border: 2px solid var(--warna-coklat-gelap); 
-    padding: 40px; 
-    border-radius: 8px; 
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+    background-color: var(--warna-krem-terang);
+    border: 2px solid var(--warna-coklat-gelap);
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     line-height: 1.8;
-    color: var(--warna-coklat-gelap); 
-    margin-top: 20px; 
+    color: var(--warna-coklat-gelap);
+    margin-top: 20px;
 }
 
 .profil-content h3 {
-    color: var(--warna-coklat-gelap); 
+    color: var(--warna-coklat-gelap);
     margin-top: 30px;
     margin-bottom: 15px;
-    border-bottom: 2px solid var(--warna-coklat-sedang); 
+    border-bottom: 2px solid var(--warna-coklat-sedang);
     padding-bottom: 5px;
-    font-size: 24px; 
+    font-size: 24px;
 }
 
 .profil-content p {
@@ -278,7 +285,7 @@ footer {
 
 .profil-image {
     width: 100%;
-    max-width: 600px;
+    max-width: 500px;
     height: auto;
     display: block;
     margin: 30px auto;
@@ -292,6 +299,9 @@ footer {
     text-align: center;
 }
 
+/* =========================================
+   6. HALAMAN STRUKTUR ORGANISASI
+   ========================================= */
 #struktur-organisasi {
     padding: 100px 0;
     text-align: center;
@@ -306,7 +316,7 @@ footer {
 
 .struktur-bagan {
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
     align-items: center;
 }
 
@@ -315,7 +325,7 @@ footer {
     justify-content: center;
     width: 100%;
     position: relative;
-    margin-bottom: 50px; 
+    margin-bottom: 45px;
 }
 
 .card-item {
@@ -327,34 +337,33 @@ footer {
 .nama-card {
     background-color: var(--warna-putih);
     color: var(--warna-coklat-gelap);
-    padding: 10px 15px;
+    padding: 20px 15px;
     border: 1px solid var(--warna-coklat-sedang);
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     font-weight: bold;
-    
     display: flex;
-    flex-direction: row; 
+    flex-direction: row;
     align-items: center;
-    text-align: left; 
+    text-align: left;
     width: fit-content;
-    margin: 0 auto; 
+    margin: 0 auto;
 }
-
 
 .pengurus-foto {
-    width: 100px; 
+    width: 100px;
     height: 100px;
     object-fit: cover;
-    border-radius: 50%;
+    border-radius: 10%;
     border: 2px solid var(--warna-coklat-sedang);
-    margin-right: 8px; 
+    margin-right: 10px;
 }
 
+/* Garis Struktur Level 1 */
 .level-1 .card-item::after {
     content: '';
     position: absolute;
-    bottom: -40px; 
+    bottom: -40px;
     left: 50%;
     transform: translateX(-50%);
     width: 2px;
@@ -362,7 +371,7 @@ footer {
     background-color: var(--warna-coklat-sedang);
 }
 
-
+/* Garis Struktur Level 2 */
 .level-2::before {
     content: '';
     position: absolute;
@@ -371,15 +380,15 @@ footer {
     right: 0;
     height: 8px;
     background-color: var(--warna-coklat-sedang);
-    width: calc(100% - 20px); 
+    width: calc(100% - 20px);
     margin: 0 10px;
+    z-index: -1;
 }
-
 
 .level-2 .card-item::before {
     content: '';
     position: absolute;
-    top: -40px; 
+    top: -40px;
     left: 50%;
     transform: translateX(-50%);
     width: 2px;
@@ -388,18 +397,11 @@ footer {
 }
 
 
-.level-2::before {
-    z-index: -1; 
-}
-
-
 .level-1 .card-item::after {
     height: 20px;
     bottom: -20px;
     z-index: 10;
 }
-
-
 
 #deskripsi-tugas {
     padding: 50px 0;
@@ -425,7 +427,9 @@ footer {
     margin-bottom: 10px;
 }
 
-
+/* =========================================
+   7. HALAMAN ANGGOTA
+   ========================================= */
 #daftar-anggota {
     padding: 60px 0;
     background-color: var(--warna-cream);
@@ -438,12 +442,11 @@ footer {
     color: var(--warna-coklat-gelap);
 }
 
-.anggota-grid { 
+.anggota-grid {
     display: grid;
-   
-    grid-template-columns: repeat(4, 1fr); 
+    grid-template-columns: repeat(4, 1fr);
     gap: 30px;
-    justify-items: center; 
+    justify-items: center;
 }
 
 .anggota-card {
@@ -457,7 +460,7 @@ footer {
 }
 
 .anggota-card:hover {
-    transform: translateY(-5px); 
+    transform: translateY(-5px);
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
 }
 
@@ -489,13 +492,14 @@ footer {
     color: var(--warna-coklat-gelap);
 }
 
+
 @media (max-width: 1024px) {
     .anggota-grid {
         grid-template-columns: repeat(3, 1fr);
     }
 }
 
-@media (max-width: 768px) { 
+@media (max-width: 768px) {
     .anggota-grid {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -505,4 +509,15 @@ footer {
     .anggota-grid {
         grid-template-columns: 1fr;
     }
+}
+
+/* =========================================
+   8. FOOTER (GLOBAL)
+   ========================================= */
+footer {
+    background-color: var(--warna-coklat-gelap);
+    color: var(--warna-cream);
+    text-align: center;
+    padding: 30px 0;
+    margin-top: 40px;
 }
