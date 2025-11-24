@@ -1,4 +1,5 @@
-const slide = document.getElementsByClassName('foto1');
+const slide = document.getElementsByClassName('main1');
+const fadein = document.getElementsByClassName('sub');
 
 function slideFunction() {
 
@@ -6,6 +7,11 @@ function slideFunction() {
     slide[i].removeAttribute("id");
     void slide[i].offsetWidth;    
     slide[i].setAttribute("id", "slideKiri");
+    slide[i].removeAttribute("onclick");
   }
+
+  fadein[0].setAttribute("id", "fadein");
+
+  
 
 }

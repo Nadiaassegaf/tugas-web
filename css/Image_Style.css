@@ -99,9 +99,7 @@ body {
     
 }
 
-.foto1 {
-    border-radius: 30px;
-}
+
 
 #Tahun {
     text-align: center; 
@@ -109,10 +107,6 @@ body {
     
 }
 
-.foto1:hover {
-    height:430px
-    
-}
 
 #slideKiri {
     animation-name: slideKiri;
@@ -122,12 +116,41 @@ body {
     animation-iteration-count: 1;
 }
 
+#fadein {
+    animation-name: fadein;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadein {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
 .foto {
     display: flex;
     justify-content: center;
     
 }
 
+.main1:hover {
+    height:430px
+    
+}
+
+.main1 {
+    border-radius: 30px;
+}
+
+.sub {
+    opacity: 0;
+    border-radius: 30px;
+}
+
+.sub:hover {
+    height:430px
+}
 
 @keyframes slideKiri {
     0%  {right:0px; top:0px;}
