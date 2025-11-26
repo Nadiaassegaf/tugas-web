@@ -2,6 +2,13 @@ const slide = document.getElementsByClassName('main1');
 const sub = document.getElementsByClassName('sub');
 const lib = document.getElementById("fotos");
 
+function show(){
+  const photos = document.getElementById('photos')
+  const image = document.createElement('img'); //putting this inside 
+  image.src = "image/aam.jpg";
+  photos.appendChild(image);
+}
+
 function slideFunction() {
 
     for (let i = 0; i < slide.length; i++){

@@ -171,7 +171,7 @@ body {
 .intro {
     display: flex;
     flex-direction: column;
-    background-color: rgb(228, 241, 252);
+    background-color: rgb(251, 246, 241);
     height: 500px;
     justify-content: center;
     place-items: center;
@@ -191,6 +191,7 @@ body {
 
 .gallery-list {
     padding-top: 100px;
+    padding-bottom: 40px;
     display: flex;
     justify-content: center;
     background-color: rgb(255, 255, 255);
@@ -209,8 +210,11 @@ body {
 }
 
 .block:hover {
-    background-color: rgb(200, 226, 242);
-    opacity: 60%;
+    opacity: 90%;
+}
+
+.block img:hover {
+    zoom: 105%;
 }
 
 .block img {
@@ -219,4 +223,23 @@ body {
     aspect-ratio: 5/2;
     object-fit: cover;
     width: auto; height: 200px;
+}
+
+.photos {
+    display: flex;
+    max-width: 100%;
+    background-color: #4E4039;
+    align-items: center;
+    justify-content: center;
+}
+
+.photos img{
+    padding: 20px;
+    max-width: 500px;
+    max-height: auto;
+    border-radius: 10%;
+}
+
+.photos img:hover {
+    max-width: 510px;
 }
