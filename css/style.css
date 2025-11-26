@@ -521,3 +521,9 @@ footer {
     padding: 30px 0;
     margin-top: 40px;
 }
+
+#garis2 {
+    margin-bottom: 40px;
+    border-bottom: 2px solid black;
+    width: 79%;
+}

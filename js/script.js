@@ -7,7 +7,7 @@ function appendImage(parent, imageSrc){
   let image = document.createElement('img');
   image.src = imageSrc;
   parent.appendChild(image);
-}
+} //for append child
 
 
 function show1(){
@@ -15,9 +15,9 @@ function show1(){
   let block = document.getElementById("block1");
   let photos = document.getElementById('photos');
 
-  appendImage(photos, "image/aam.jpg");
-  appendImage(photos, "image/alfi.jpg");
-  appendImage(photos, "image/nanda.jpg");
+  for (let i = 1; i <= 13; i++){
+    appendImage(photos, `image/disnatalis/D${i}.JPG`);
+  }
 
   block.setAttribute("onclick", "removeElement()");
 }
@@ -27,20 +27,20 @@ function show2(){
   const block = document.getElementById("block2");
   const photos = document.getElementById('photos');
 
-  const image = document.createElement('img'); //putting this inside
-  image.src = "image/aam.jpg";
-  photos.appendChild(image);
-
-  const image2 = document.createElement('img'); 
-  image2.src = "image/aldi.jpg";
-  photos.appendChild(image2);
-
-  const image3 = document.createElement('img');
-  image3.src = "image/nanda.jpg";
-  photos.appendChild(image3);
+  for (let i = 1; i <= 23; i++){
+    if (i === 23){
+      fileName = ".png"
+    } else {
+      fileName = ".jpg"
+    }
+    appendImage(photos, `image/inagurasi/${i}${fileName}`);
+  }
 
   block.setAttribute("onclick", "removeElement()");
 }
+
+
+
 
 
 function removeElement(){
@@ -61,8 +61,9 @@ function removeElement(){
   block2.setAttribute("onclick", "show2()");
 }
 
-
-
+//////////////ABORTED PROJECT///////////////////////
+//////////////ABORTED PROJECT///////////////////////
+//////////////ABORTED PROJECT///////////////////////
 
 function slideFunction() {
     for (let i = 0; i < slide.length; i++){

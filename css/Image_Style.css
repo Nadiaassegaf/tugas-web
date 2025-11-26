@@ -87,6 +87,12 @@ body {
     color: var(--warna-putih);
 }
 
+footer {
+    background-color: var(--warna-coklat-gelap);
+    color: var(--warna-cream);
+    text-align: center;
+    padding: 30px 0;
+}
 
 
 
