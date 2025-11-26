@@ -227,19 +227,21 @@ body {
 
 .photos {
     display: flex;
+    flex-wrap: wrap;
     max-width: 100%;
     background-color: #4E4039;
     align-items: center;
     justify-content: center;
+    padding: 10%;
 }
 
 .photos img{
+    
     padding: 20px;
-    max-width: 500px;
-    max-height: auto;
-    border-radius: 10%;
+    max-width: auto;
+    max-height: 400px;
 }
 
 .photos img:hover {
-    max-width: 510px;
+    max-height: 410px;
 }
