@@ -66,6 +66,7 @@ body {
 .main-nav ul { 
     list-style: none; 
     display: flex;
+    flex-wrap: wrap;
     margin: 0; 
     padding: 0;
 }
@@ -193,8 +194,14 @@ footer {
 
 .intro h1 {
     color: black;
-    font-size: 90px;
+    font-size: 400%;
     font-family: "Times New Roman", Times, serif;
+}
+
+@media (max-width: 700px){
+    .intro h1{
+        font-size: 150%;
+    }
 }
 
 .intro #garis1 {
