@@ -1,4 +1,3 @@
-
 :root {
     --warna-cream: #FAF8F1;
     --warna-putih: #FFFFFF;
@@ -14,16 +13,23 @@
     box-sizing: border-box;
 }
 
+/* =====================================================
+   2. GLOBAL
+   ===================================================== */
 body {
     font-family: var(--font-utama);
     background-color: var(--warna-cream);
     color: var(--warna-coklat-gelap);
     line-height: 1.6;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: space-between;
+}
+
+/* HANYA UNTUK LOGIN & REGISTER */
+body.auth-page {
     min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--warna-coklat-sedang);
 }
 
 .container {
@@ -32,14 +38,13 @@ body {
     margin: 0 auto;
 }
 
-/* =========================================
-   2. HEADER & NAVIGASI
-   ========================================= */
+/* =====================================================
+   3. HEADER & NAVIGASI
+   ===================================================== */
 .main-header {
     background-color: var(--warna-putih);
     padding: 10px 0;
     border-bottom: 2px solid var(--warna-coklat-sedang);
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
 }
 
 .main-header .container {
@@ -55,161 +60,127 @@ body {
 
 .header-logo {
     height: 40px;
-    margin-right: 15px;
+    margin-right: 12px;
 }
 
 .site-title {
     font-size: 24px;
     font-weight: bold;
-    color: var(--warna-coklat-gelap);
 }
 
 .main-nav ul {
     list-style: none;
     display: flex;
-    flex-wrap: wrap;
-    margin: 0;
-    padding: 0;
 }
 
-.main-nav ul li {
-    margin-left: 25px;
+.main-nav li {
+    margin-left: 20px;
 }
 
-.main-nav ul li a {
+.main-nav a {
     text-decoration: none;
     color: var(--warna-coklat-sedang);
     font-weight: bold;
-    padding: 5px 10px;
-    border-radius: 5px;
-    transition: all 0.3s ease;
+    padding: 6px 12px;
+    border-radius: 6px;
+    transition: .3s;
 }
 
-.main-nav ul li a:hover {
-    background-color: var(--warna-cream);
-    color: var(--warna-coklat-gelap);
+.main-nav a:hover {
+    background: var(--warna-cream);
 }
 
-.main-nav ul li a.active {
-    background-color: var(--warna-coklat-gelap);
+.main-nav a.active {
+    background: var(--warna-coklat-gelap);
     color: var(--warna-putih);
 }
 
-/* =========================================
-   3. HERO SECTION (HOME - INDEX.HTML)
-   ========================================= */
+/* =====================================================
+   4. HERO SECTION
+   ===================================================== */
 .hero-section {
-    background-image: url(../image/kelas.jpg); 
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 700px; 
+    background: url("../image/kelas.jpg") center/cover no-repeat;
+    height: 700px;
+    position: relative;
+    color: white;
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
     text-align: center;
-    position: relative; 
-    color: var(--warna-putih);
-    padding: 30px;
 }
 
 .hero-section::before {
-    content: '';
+    content: "";
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); 
-    z-index: 1;
+    inset: 0;
+    background: rgba(0,0,0,.5);
 }
 
 .hero-content {
     position: relative;
     z-index: 2;
-    max-width: 800px;
-    padding: 20px;
 }
 
 .hero-content h1 {
     font-size: 42px;
-    margin-bottom: 10px;
-    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.7);
 }
 
 .hero-content p {
     font-size: 18px;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
 }
 
-
+/* =====================================================
+   SOCIAL ICONS (FIX UKURAN ICON BESAR)
+   ===================================================== */
 .social-icons-bottom {
     position: absolute;
     bottom: 20px;
     left: 20px;
     display: flex;
     gap: 15px;
-    z-index: 10;
+    z-index: 2;
 }
 
 .social-item {
     display: flex;
     align-items: center;
     gap: 8px;
-    text-decoration: none;
+    background: rgba(0,0,0,.5);
     color: white;
-    font-weight: bold;
-    background-color: rgba(0, 0, 0, 0.5); 
-    padding: 8px 12px;
+    padding: 8px 14px;
     border-radius: 30px;
-    transition: transform 0.3s ease, background-color 0.3s;
+    text-decoration: none;
+    font-size: 14px;
 }
 
 .social-item img {
-    width: 24px;
-    height: 24px;
-    display: block;
+    width: 22px;
+    height: 22px;
+    object-fit: contain;
 }
 
-.social-item:hover {
-    transform: translateY(-3px);
-    background-color: rgba(0, 0, 0, 0.8); 
-}
-
-/* =========================================
-   4. SPOTLIGHT / PRESTASI (HOME)
-   ========================================= */
+/* =====================================================
+   5. SPOTLIGHT
+   ===================================================== */
 #spotlight-prestasi {
     padding: 60px 0;
+    background: var(--warna-krem-terang);
     text-align: center;
-    background-color: var(--warna-krem-terang);
-    margin-top: 0;
-}
-
-#spotlight-prestasi h2 {
-    font-size: 32px;
-    margin-bottom: 40px;
-    color: var(--warna-coklat-gelap);
 }
 
 .spotligth-container {
     display: flex;
-    justify-content: center; 
-    flex-wrap: wrap;
     gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .student-card {
-    background-color: var(--warna-putih);
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
     width: 300px;
+    background: var(--warna-putih);
     padding: 25px;
-    transition: transform 0.3s ease;
-}
-
-.student-card:hover {
-    transform: translateY(-5px);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,.1);
 }
 
 .student-card img {
@@ -217,339 +188,161 @@ body {
     height: 120px;
     object-fit: cover;
     border-radius: 50%;
-    border: 3px solid var(--warna-coklat-sedang);
     margin-bottom: 15px;
+    border: 3px solid var(--warna-coklat-sedang);
 }
 
 .student-card h3 {
-    font-size: 20px;
     margin-bottom: 5px;
 }
 
 .student-card .prestasi {
     font-size: 14px;
     color: var(--warna-coklat-sedang);
-    font-style: italic;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 
-.student-card blockquote {
-    font-size: 16px;
-    font-weight: bold;
-    color: var(--warna-coklat-gelap);
-}
 
-/* =========================================
-   5. HALAMAN PROFIL
-   ========================================= */
+/* =====================================================
+   6. PROFIL
+   ===================================================== */
 #profil-kelas {
     padding: 60px 0;
-    background-color: var(--warna-coklat-sedang);
-    border-bottom: 1px solid var(--warna-coklat-gelap);
-}
-
-#profil-kelas h2 {
-    text-align: center;
-    font-size: 36px;
-    margin-bottom: 40px;
-    color: var(--warna-cream);
+    background: var(--warna-coklat-sedang);
 }
 
 .profil-content {
-    background-color: var(--warna-krem-terang);
-    border: 2px solid var(--warna-coklat-gelap);
+    background: var(--warna-krem-terang);
     padding: 40px;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    line-height: 1.8;
-    color: var(--warna-coklat-gelap);
-    margin-top: 20px;
-}
-
-.profil-content h3 {
-    color: var(--warna-coklat-gelap);
-    margin-top: 30px;
-    margin-bottom: 15px;
-    border-bottom: 2px solid var(--warna-coklat-sedang);
-    padding-bottom: 5px;
-    font-size: 24px;
-}
-
-.profil-content p {
-    margin-bottom: 15px;
-}
-
-.profil-content ul {
-    list-style: disc;
-    margin-left: 30px;
-    margin-bottom: 20px;
-}
-
-.profil-content ul li {
-    margin-bottom: 5px;
+    border-radius: 10px;
 }
 
 .profil-image {
     width: 100%;
     max-width: 500px;
-    height: auto;
     display: block;
     margin: 30px auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
 }
 
-#sejarah-kelas {
-    padding: 40px 0;
-    background-color: var(--warna-cream);
-    text-align: center;
-}
-
-/* =========================================
-   6. HALAMAN STRUKTUR ORGANISASI
-   ========================================= */
-#struktur-organisasi {
-    padding: 100px 0;
-    text-align: center;
-    background-color: var(--warna-cream);
-}
-
-#struktur-organisasi h2 {
-    font-size: 36px;
-    margin-bottom: 50px;
-    color: var(--warna-coklat-gelap);
-}
-
-.struktur-bagan {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.level-container {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    position: relative;
-    margin-bottom: 45px;
-}
-
-.card-item {
-    padding: 0 30px;
-    position: relative;
-    text-align: center;
-}
-
-.nama-card {
-    background-color: var(--warna-putih);
-    color: var(--warna-coklat-gelap);
-    padding: 20px 15px;
-    border: 1px solid var(--warna-coklat-sedang);
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    font-weight: bold;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    text-align: left;
-    width: fit-content;
-    margin: 0 auto;
-}
-
-.pengurus-foto {
-    width: 100px;
-    height: 100px;
-    object-fit: cover;
-    border-radius: 10%;
-    border: 2px solid var(--warna-coklat-sedang);
-    margin-right: 10px;
-}
-
-/* Garis Struktur Level 1 */
-.level-1 .card-item::after {
-    content: '';
-    position: absolute;
-    bottom: -40px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 2px;
-    height: 60px;
-    background-color: var(--warna-coklat-sedang);
-}
-
-/* Garis Struktur Level 2 */
-.level-2::before {
-    content: '';
-    position: absolute;
-    top: -40px;
-    left: 0;
-    right: 0;
-    height: 8px;
-    background-color: var(--warna-coklat-sedang);
-    width: calc(100% - 20px);
-    margin: 0 10px;
-    z-index: -1;
-}
-
-.level-2 .card-item::before {
-    content: '';
-    position: absolute;
-    top: -40px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 2px;
-    height: 40px;
-    background-color: var(--warna-coklat-sedang);
-}
-
-
-.level-1 .card-item::after {
-    height: 45px;
-    bottom: -45px;
-    z-index: 10;
-}
-
-#deskripsi-tugas {
-    padding: 50px 0;
-    background-color: var(--warna-krem-terang);
-}
-
-#deskripsi-tugas h3 {
-    text-align: left;
-    margin-bottom: 20px;
-    color: var(--warna-coklat-gelap);
-}
-
-#deskripsi-tugas ul {
-    list-style: disc;
-    margin-left: 50px;
-    text-align: left;
-    max-width: 800px;
-    margin: 0 auto;
-    padding-left: 20px;
-}
-
-#deskripsi-tugas ul li {
-    margin-bottom: 10px;
-}
-
-/* =========================================
-   7. HALAMAN ANGGOTA
-   ========================================= */
-#daftar-anggota {
-    padding: 60px 0;
-    background-color: var(--warna-cream);
-    text-align: center;
-}
-
-#daftar-anggota h2 {
-    font-size: 32px;
-    margin-bottom: 40px;
-    color: var(--warna-coklat-gelap);
-}
-
+/* =====================================================
+   7. ANGGOTA
+   ===================================================== */
 .anggota-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4,1fr);
     gap: 30px;
-    justify-items: center;
 }
 
-.anggota-card {
-    background-color: var(--warna-putih);
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
-    padding: 20px;
+@media(max-width:768px){
+    .anggota-grid {
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+/* =====================================================
+   8. LOGIN & REGISTER
+   ===================================================== */
+.auth-box {
+    width: 360px;
+    background: var(--warna-krem-terang);
+    padding: 32px;
+    border-radius: 14px;
+    box-shadow: 0 8px 20px rgba(0,0,0,.25);
+}
+
+.auth-box h2 {
     text-align: center;
-    transition: transform 0.3s ease;
+    margin-bottom: 20px;
+}
+
+.auth-box input {
     width: 100%;
+    padding: 12px;
+    margin-bottom: 14px;
+    border-radius: 8px;
+    border: 1px solid var(--warna-coklat-sedang);
 }
 
-.anggota-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
-}
-
-.anggota-foto {
-    width: 100px;
-    height: 100px;
-    object-fit: cover;
-    border-radius: 50%;
-    border: 4px solid var(--warna-coklat-sedang);
-    margin-bottom: 15px;
-}
-
-.anggota-card h3 {
-    font-size: 18px;
-    margin-bottom: 5px;
-    color: var(--warna-coklat-gelap);
-}
-
-.anggota-card .role {
-    font-size: 13px;
-    color: var(--warna-coklat-sedang);
-    margin-bottom: 10px;
-}
-
-.anggota-card blockquote {
-    font-size: 14px;
-    font-style: italic;
-    margin-top: 10px;
-    color: var(--warna-coklat-gelap);
-}
-
-
-@media (max-width: 1024px) {
-    .anggota-grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
-
-@media (max-width: 768px) {
-    .anggota-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 480px) {
-    .anggota-grid {
-        grid-template-columns: 1fr;
-    }
-}
-
-.scrollUp {
-    background-image: url("https://cdn-icons-png.flaticon.com/512/4196/4196777.png");
-    background-size: 100%;
-    background-repeat: no-repeat;
-    position: fixed;
-    width: 100px;
-    height: 100px;
-    padding: 10px;
-    margin: 100px;
-    bottom: 0;
-    right: 0;
-    opacity: 20%;
-}
-
-.scrollUp:hover {
-    opacity: 100%;
+.auth-box button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background: var(--warna-coklat-gelap);
+    color: white;
     cursor: pointer;
 }
 
-/* =========================================
-   8. FOOTER (GLOBAL)
-   ========================================= */
+/* =====================================================
+   9. FOOTER
+   ===================================================== */
 footer {
-    background-color: var(--warna-coklat-gelap);
+    background: var(--warna-coklat-gelap);
     color: var(--warna-cream);
     text-align: center;
     padding: 30px 0;
-    margin-top: auto;
-
 }
 
-#garis2 {
-    margin-bottom: 40px;
-    border-bottom: 2px solid black;
-    width: 79%;
+/* ===========================
+     GALERI 
+   =========================== */
+
+.gallery-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    padding: 60px 5%;
+}
+
+.gallery-list .block {
+    background: white;
+    border-radius: 14px;
+    padding: 15px;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: 0 6px 15px rgba(0,0,0,.12);
+    transition: transform .3s ease;
+}
+
+.gallery-list .block:hover {
+    transform: translateY(-5px);
+}
+
+.gallery-list .block img {
+    width: 100%;
+    height: 180px;       
+    object-fit: cover;  
+    border-radius: 10px;
+}
+
+/* ================= INTRO JUDUL ================= */
+.intro {
+    text-align: center;   
+    margin: 40px 0;       
+}
+
+.intro h1 {
+    font-size: 32px;     
+    color: var(--warna-coklat-gelap);
+    margin-bottom: 10px; 
+}
+
+#garis1 {
+    width: 100px;              
+    height: 3px;               
+    background-color: var(--warna-coklat-gelap);
+    margin: 0 auto;           
+    border-radius: 2px;        
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .gallery-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .gallery-list .block img {
+        height: 150px;
+    }
 }

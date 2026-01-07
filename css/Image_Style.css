@@ -1,9 +1,9 @@
 :root {
-    --warna-cream: #FAF8F1;         
-    --warna-putih: #FFFFFF;          
-    --warna-coklat-gelap: #4E4039;   
-    --warna-coklat-sedang: #8D6E63;  
-    --warna-krem-terang: #EFEBE5;    
+    --warna-cream: #FAF8F1;
+    --warna-putih: #FFFFFF;
+    --warna-coklat-gelap: #4E4039;
+    --warna-coklat-sedang: #8D6E63;
+    --warna-krem-terang: #EFEBE5;
     --font-utama: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
@@ -13,17 +13,25 @@
     box-sizing: border-box;
 }
 
-
+/* =====================================================
+   GLOBAL 
+   ===================================================== */
 body {
     font-family: var(--font-utama);
-    background-color: var(--warna-cream); 
-    color: var(--warna-coklat-gelap);     
+    background-color: var(--warna-cream);
+    color: var(--warna-coklat-gelap);
     line-height: 1.6;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+}
+
+/* =====================================================
+   AUTH PAGE SAJA (LOGIN & REGISTER)
+   ===================================================== */
+body.auth-page {
     min-height: 100vh;
-    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--warna-coklat-sedang);
 }
 
 .container {
@@ -32,22 +40,23 @@ body {
     margin: 0 auto;
 }
 
-
-.main-header { 
-    background-color: var(--warna-putih); 
-    padding: 10px 0; 
-    border-bottom: 2px solid var(--warna-coklat-sedang); 
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+/* =====================================================
+   HEADER & NAVIGASI
+   ===================================================== */
+.main-header {
+    background-color: var(--warna-putih);
+    padding: 10px 0;
+    border-bottom: 2px solid var(--warna-coklat-sedang);
+    box-shadow: 0 2px 5px rgba(0,0,0,.05);
 }
 
-.main-header .container { 
+.main-header .container {
     display: flex;
-    justify-content: space-between; 
+    justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
 }
 
-.logo-container { 
+.logo-container {
     display: flex;
     align-items: center;
 }
@@ -57,231 +66,225 @@ body {
     margin-right: 15px;
 }
 
-.site-title { 
+.site-title {
     font-size: 24px;
     font-weight: bold;
-    color: var(--warna-coklat-gelap);
 }
 
-.main-nav ul { 
-    list-style: none; 
+.main-nav ul {
+    list-style: none;
     display: flex;
-    flex-wrap: wrap;
-    margin: 0; 
-    padding: 0;
 }
 
-.main-nav ul li {
-    margin-left: 25px; 
+.main-nav li {
+    margin-left: 25px;
 }
 
-.main-nav ul li a {
+.main-nav a {
     text-decoration: none;
     color: var(--warna-coklat-sedang);
     font-weight: bold;
     padding: 5px 10px;
     border-radius: 5px;
-    transition: all 0.3s ease;
+    transition: .3s;
 }
 
-.main-nav ul li a:hover {
-    background-color: var(--warna-cream);
-    color: var(--warna-coklat-gelap);
+.main-nav a:hover {
+    background: var(--warna-cream);
 }
 
-.main-nav ul li a.active { 
-    background-color: var(--warna-coklat-gelap);
+.main-nav a.active {
+    background: var(--warna-coklat-gelap);
     color: var(--warna-putih);
 }
 
-footer {
-    background-color: var(--warna-coklat-gelap);
-    color: var(--warna-cream);
+/* =====================================================
+   LOGIN & REGISTER BOX
+   ===================================================== */
+.auth-box {
+    width: 360px;
+    background: var(--warna-krem-terang);
+    padding: 32px;
+    border-radius: 14px;
+    box-shadow: 0 8px 20px rgba(0,0,0,.25);
+}
+
+.auth-box h2 {
     text-align: center;
-    padding: 30px 0;
-    margin-top: auto;
+    margin-bottom: 20px;
+}
+
+.auth-box input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 14px;
+    border-radius: 8px;
+    border: 1px solid var(--warna-coklat-sedang);
+}
+
+.auth-box button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background: var(--warna-coklat-gelap);
+    color: white;
+    cursor: pointer;
+}
+
+.auth-box p {
+    text-align: center;
+    margin-top: 15px;
+}
+
+/* ================= SOCIAL ICON ================= */
+.social-item img {
+    width: 22px;
+    height: 22px;
+    object-fit: contain;
+}
+
+/* ================= PROFIL IMAGE ================= */
+.profil-image {
+    width: 100%;
+    max-width: 300px;
+    display: block;
+    margin: 30px auto;
+    border-radius: 12px;
+}
+
+/* ================= ANGGOTA ================= */
+.anggota-card {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.anggota-foto {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 10px;
 }
 
 
+/* =========================================
+   STRUKTUR ORGANISASI KELAS
+   ========================================= */
 
-
-
-.content {
+#struktur-organisasi {
+    padding: 60px 0;
+    background: var(--warna-krem-terang);
 }
 
-/*
-.foto img{
-    padding: 10px;
-    width: auto;
-    height: 300px; 
-    
-    
-}
-
-
-#Tahun {
-    text-align: center; 
-    padding-top: 20px;
-    
-}
-
-
-#slideKiri {
-    animation-name: slideKiri;
-    position: relative;
-    animation-duration: 2s; 
-    animation-fill-mode: forwards;
-    animation-iteration-count: 1;
-}
-
-#fadein {
-    animation-name: fadein;
-    animation-duration: 2s;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
-}
-
-@keyframes slideKiri {
-    0%  {right:0px; top:0px;}
-  100% {right:560px; top:0px;}
-}
-
-@keyframes fadein {
-    from {opacity: 0;}
-    to {opacity: 1;}
-}
-
-.foto {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    
-}
-
-.main1:hover {
-    height:330px
-    
-}
-
-.main1 {
-    border-radius: 30px;
-}
-
-.sub {
-    opacity: 0;
-    border-radius: 30px;
-}
-
-.sub:hover {
-    height:330px
-}
-
-#main1 {
-
-}
-
-*/
-
-.intro {
+.struktur-bagan {
     display: flex;
     flex-direction: column;
-    background-color: rgb(251, 246, 241);
-    height: 500px;
-    justify-content: center;
-    place-items: center;
-    flex-wrap: wrap;
-}
-
-.intro h1 {
-    color: black;
-    font-size: 400%;
-    font-family: "Times New Roman", Times, serif;
-}
-
-@media (max-width: 700px){
-    .intro h1{
-        font-size: 150%;
-    }
-}
-
-.intro #garis1 {
-    border-bottom: 2px solid black;
-    width: 80px;
-}
-
-.gallery-list {
-    padding-top: 100px;
-    padding-bottom: 40px;
-    display: flex;
-    justify-content: center;
-    background-color: rgb(255, 255, 255);
-    flex-shrink: 0;
-    flex-grow: 0;
-    flex-basis: 200px;
-    flex-wrap: wrap;
-
-}
-
-.block {
-    background-color: rgb(255, 255, 255);
-    max-height: 400px;
-    max-width: 300px;
-    margin: 20px;
-    padding: 10px;
-}
-
-.block:hover {
-    opacity: 90%;
-    cursor: pointer;
-}
-
-.block img:hover {
-    zoom: 105%;
-}
-
-.block img {
-    max-height: auto;
-    max-width: 100%;
-    aspect-ratio: 5/2;
-    object-fit: cover;
-    width: auto; height: 200px;
-}
-
-.photos {
-    display: flex;
-    flex-wrap: wrap;
-    max-width: 100%;
-    background-color: #4E4039;
     align-items: center;
+    margin-top: 40px;
+}
+
+/* LEVEL */
+.level-container {
+    display: flex;
     justify-content: center;
+    gap: 60px;
+    position: relative;
+    margin-bottom: 70px;
 }
 
-.photos img{
-    max-width: auto;
-    max-height: 400px;
-    margin: 20px;
-    border-radius: 10%;
+/* LEVEL 1 (KETUA) */
+.level-1 {
+    margin-bottom: 90px;
 }
 
-.photos img:hover {
-    max-height: 410px;
+/* KARTU */
+.card-item {
+    text-align: center;
+    position: relative;
 }
 
-.scrollUp {
-    background-image: url("https://cdn-icons-png.flaticon.com/512/4196/4196777.png");
-    background-size: 100%;
-    background-repeat: no-repeat;
-    position: fixed;
+/* FOTO PENGURUS (KHUSUS STRUKTUR) */
+#struktur-organisasi .pengurus-foto {
     width: 100px;
     height: 100px;
-    padding: 10px;
-    margin: 100px;
-    bottom: 0;
-    right: 0;
-    opacity: 20%;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--warna-coklat-sedang);
+    background: white;
+    margin: 0 auto 10px;
 }
 
-.scrollUp:hover {
-    opacity: 100%;
-    cursor: pointer;
+
+/* NAMA */
+.nama-card div {
+    font-size: 14px;
+    font-weight: bold;
+    max-width: 160px;
+    margin: 0 auto;
+}
+
+/* GARIS VERTIKAL KE BAWAH */
+.level-1::after {
+    content: "";
+    position: absolute;
+    bottom: -50px;
+    left: 50%;
+    width: 2px;
+    height: 40px;
+    background: var(--warna-coklat-sedang);
+    transform: translateX(-50%);
+}
+
+/* GARIS HORIZONTAL LEVEL 2 */
+.level-2::before {
+    content: "";
+    position: absolute;
+    top: -25px;
+    left: 10%;
+    right: 10%;
+    height: 2px;
+    background: var(--warna-coklat-sedang);
+}
+
+/* GARIS DARI HORIZONTAL KE ATAS CARD */
+.level-2 .card-item::before {
+    content: "";
+    position: absolute;
+    top: -25px;
+    left: 50%;
+    width: 2px;
+    height: 25px;
+    background: var(--warna-coklat-sedang);
+    transform: translateX(-50%);
+}
+
+/* PANAH */
+.level-2 .card-item::after {
+    content: "▼";
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 12px;
+    color: var(--warna-coklat-sedang);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .level-container {
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+
+    .level-2::before {
+        display: none;
+    }
+
+    .level-2 .card-item::before,
+    .level-2 .card-item::after {
+        display: none;
+    }
 }

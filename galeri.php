@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gallery IF A</title>
-    <link rel="stylesheet" href="css/Image_Style.css">
+    <link rel="stylesheet" href="css/image_style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
@@ -17,11 +18,12 @@
             </div> 
             <nav class="main-nav">
                 <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="profil.html">Profil</a></li>
-                    <li><a href="struktur.html">Struktur</a></li>
-                    <li><a href="anggota.html">Anggota</a></li>
-                    <li><a href="galeri.html" class="active" >Galeri</a></li>
+                    <li><a href="index.php">Home</a></li>
+                    <li><a href="profil.php">Profil</a></li>
+                    <li><a href="struktur.php">Struktur</a></li>
+                    <li><a href="anggota.php">Anggota</a></li>
+                    <li><a href="galeri.php" class="active" >Galeri</a></li>
+                    <li><a href="logout.php">Logout</a></li>
                 </ul>
             </nav>
         </div>
