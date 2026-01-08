@@ -21,16 +21,10 @@ body {
     background-color: var(--warna-cream);
     color: var(--warna-coklat-gelap);
     line-height: 1.6;
-<<<<<<< HEAD
 }
 
 /* HANYA UNTUK LOGIN & REGISTER */
 body.auth-page {
-=======
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
->>>>>>> parent of 609d1fa (patch #3)
     min-height: 100vh;
     display: flex;
     justify-content: center;
@@ -77,11 +71,6 @@ body.auth-page {
 .main-nav ul {
     list-style: none;
     display: flex;
-<<<<<<< HEAD
-=======
-    margin: 0;
-    padding: 0;
->>>>>>> parent of 609d1fa (patch #3)
 }
 
 .main-nav li {
