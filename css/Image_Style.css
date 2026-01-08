@@ -74,6 +74,11 @@ body.auth-page {
 .main-nav ul {
     list-style: none;
     display: flex;
+<<<<<<< HEAD
+=======
+    margin: 0; 
+    padding: 0;
+>>>>>>> parent of 609d1fa (patch #3)
 }
 
 .main-nav li {
@@ -182,6 +187,70 @@ body.auth-page {
 .struktur-bagan {
     display: flex;
     flex-direction: column;
+<<<<<<< HEAD
+=======
+    background-color: rgb(251, 246, 241);
+    height: 500px;
+    justify-content: center;
+    place-items: center;
+    flex-wrap: wrap;
+}
+
+.intro h1 {
+    color: black;
+    font-size: 90px;
+    font-family: "Times New Roman", Times, serif;
+}
+
+.intro #garis1 {
+    border-bottom: 2px solid black;
+    width: 80px;
+}
+
+.gallery-list {
+    padding-top: 100px;
+    padding-bottom: 40px;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(255, 255, 255);
+    flex-shrink: 0;
+    flex-grow: 0;
+    flex-basis: 200px;
+    flex-wrap: wrap;
+
+}
+
+.block {
+    background-color: rgb(255, 255, 255);
+    max-height: 400px;
+    max-width: 300px;
+    margin: 20px;
+    padding: 10px;
+}
+
+.block:hover {
+    opacity: 90%;
+    cursor: pointer;
+}
+
+.block img:hover {
+    zoom: 105%;
+}
+
+.block img {
+    max-height: auto;
+    max-width: 100%;
+    aspect-ratio: 5/2;
+    object-fit: cover;
+    width: auto; height: 200px;
+}
+
+.photos {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 100%;
+    background-color: #4E4039;
+>>>>>>> parent of 609d1fa (patch #3)
     align-items: center;
     margin-top: 40px;
 }
